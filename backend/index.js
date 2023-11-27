@@ -1,4 +1,4 @@
-const { NOMEM } = require("dns");
+// const { NOMEM } = require("dns");
 
 //variáveis a serem recebidas preenchidas no Json
 //Login (Flag 1)

@@ -21,7 +21,7 @@
         <div class="mb-4">
           <label for="senha" class="form-label"></label>
           <input
-            type="senha"
+            type="password"
             class="form-control bg-white rounded-pill"
             id="senha"
             v-model="senha"
