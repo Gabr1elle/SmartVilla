@@ -85,11 +85,41 @@
         </li>
       </ul>
     </div>
+    <div>
+      <!-- botao voltar -->
+      <button
+        type="button"
+        class="sair position-absolute top-0 start-0 m-3"
+        @click="logout"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
+import { useRouter } from "vue-router";
+
 export default {
+  setup() {
+    const router = useRouter();
+
+    // Redirecione para a página de Dashboard
+    const logout = () => {
+      router.push({ name: "dashboard" });
+    };
+
+    return { logout };
+  },
   data() {
     return {
       nome: "",
@@ -129,4 +159,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.sair {
+  background-color: #d9d9d9;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+</style>

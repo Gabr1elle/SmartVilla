@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
 
   {
-    path: '/login',
+    path: '/',
     name: 'login',
     component: () => import( '../views/LoginView.vue')
     
@@ -54,6 +54,17 @@ const routes = [
     path: '/relatorios',
     name: 'relatorios',
     component: () => import( '../views/Relatorios.vue')
+    
+  },
+    {
+    path: '/cadastrarfuncionario',
+    name: 'cadastrarfuncionario',
+    component: () => import( '../views/CadastrarFuncionario.vue')
+  },
+  {
+    path: '/dadosfuncionarios',
+    name: 'dadosfuncionarios',
+    component: () => import( '../views/DadosFuncionarios.vue')
     
   },
   
